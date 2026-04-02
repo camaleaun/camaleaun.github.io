@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="pt-BR"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="description" content="Você investe tempo e dinheiro no seu site WordPress — mas será que ele está realmente protegido? Com o aumento dos ataques cibernéticos, principalment"><title>🚨 Checklist Avançado de Segurança para WordPress 🚨</title><script>
+      (() => {
+        const stored = localStorage.getItem("theme-mode") || "auto";
+        const resolved =
+          stored === "auto"
+            ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+            : stored;
+        document.documentElement.setAttribute("data-theme", resolved);
+        document.documentElement.setAttribute("data-theme-mode", stored);
+      })();
+    </script><style>:root{--bg: #ffffff;--surface: #fffdfa;--ink: #1e1f22;--accent: #0f6d5a;--accent-soft: #d7ece5;--line: #d7d0c4;--shadow: rgba(27, 31, 41, .08)}html[data-theme=dark]{--bg: #121418;--surface: #1e2124;--ink: #f2f2f3;--accent: #7de2bf;--accent-soft: #1c3f34;--line: #32363b;--shadow: rgba(0, 0, 0, .35)}*{box-sizing:border-box}body{margin:0;font-family:IBM Plex Sans,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}.shell{width:min(980px,92vw);margin:2rem auto 4rem}.home-link{color:var(--accent);text-decoration:none;font-weight:700}.topbar{display:flex;justify-content:space-between;align-items:center;gap:1rem}.topbar-tools{display:flex;align-items:center;gap:.65rem}.nav-dropdown{position:relative;padding-bottom:.2rem}.nav-dropdown-trigger{border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;cursor:pointer;font-size:.85rem}.nav-dropdown-trigger:after{content:"";width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.75;margin-left:.15rem;transform:translateY(1px)}.nav-dropdown.is-open .nav-dropdown-trigger:after{transform:translateY(1px) rotate(180deg)}.icon-language,.icon-theme{opacity:.9}.nav-dropdown-menu{list-style:none;margin:0;padding:.35rem;position:absolute;right:0;top:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;min-width:170px;box-shadow:0 10px 28px var(--shadow);display:none;z-index:20}.nav-dropdown.is-open .nav-dropdown-menu{display:block}.nav-dropdown-menu a,.dropdown-option{text-decoration:none;color:var(--ink);display:block;width:100%;text-align:left;border:0;border-radius:8px;background:transparent;padding:.45rem .55rem;font-size:.86rem;cursor:pointer}.nav-dropdown-menu a:hover,.dropdown-option:hover{background:var(--accent-soft)}.nav-dropdown-menu a.active,.dropdown-option.active{background:var(--accent-soft);color:var(--ink)}.post-grid{margin-top:1.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}.post-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:.8rem;display:flex;flex-direction:column}.post-card img,.post-thumbnail{width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}.thumb-placeholder{width:100%;aspect-ratio:1 / 1;border-radius:10px;border:1px dashed var(--line);background:radial-gradient(circle at 20% 20%,color-mix(in srgb,var(--accent) 22%,transparent) 0,transparent 42%),radial-gradient(circle at 80% 70%,color-mix(in srgb,var(--ink) 14%,transparent) 0,transparent 36%),linear-gradient(135deg,color-mix(in srgb,var(--surface) 84%,var(--accent-soft)) 0%,var(--surface) 100%)}.post-card a{color:var(--ink);text-decoration:none}.post-card-media{display:block;aspect-ratio:1 / 1;overflow:hidden;border-radius:10px;border:1px solid var(--line)}.post-card-media img,.post-card-media picture{width:100%;height:100%;object-fit:cover;border:0;border-radius:0}.post-card-body{display:flex;flex-direction:column;gap:.3rem;flex:1;padding-top:.6rem}.post-card-footer{margin-top:auto;display:flex;flex-direction:column;gap:.3rem}.post-card-title{color:var(--ink);text-decoration:none}.post-card h2{margin:0;font-size:1.05rem;line-height:1.35}.post-card p{margin:0}.post-single{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem}.post-meta{margin-top:-.4rem;color:#62666f}@media(max-width:640px){.shell{margin-top:1rem}.topbar{flex-wrap:wrap}}
+</style></head> <body> <main class="shell"> <div class="topbar"> <a class="home-link" href="/pt-br/">Blog</a> <div class="topbar-tools"> <div id="language-dropdown" class="nav-dropdown nav-dropdown--language" role="navigation" aria-label="Language switcher"> <button id="language-trigger" class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false"> <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" class="icon-language"> <path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path> </svg> <span>Portugues (BR)</span> </button> <ul class="nav-dropdown-menu" role="menu"> <li><a href="/advanced-security-checklist-for-wordpress/" class lang="en">English</a></li> <li><a href="/pt-br/checklist-avancado-de-seguranca-para-wordpress/" class="active" lang="pt-BR">Portugues (BR)</a></li> </ul> </div> <div id="theme-dropdown" class="nav-dropdown nav-dropdown--theme" role="navigation" aria-label="Theme switcher"> <button id="theme-trigger" class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false"> <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" class="icon-theme icon-theme-light"> <path fill="currentColor" d="M12 18a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm0-16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm9 9a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2h2zM5 12a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h2zm11.66 6.66a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.41 1.41l-1.42-1.41a1 1 0 0 1 0-1.42zM4.51 4.51a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 1 1-1.41 1.41L4.51 5.93a1 1 0 0 1 0-1.42zm13.58 2.83a1 1 0 0 1 0-1.41l1.41-1.42a1 1 0 1 1 1.42 1.41l-1.42 1.42a1 1 0 0 1-1.41 0zM5.93 16.66a1 1 0 0 1 1.41 1.41l-1.42 1.42a1 1 0 0 1-1.41-1.41l1.42-1.42zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"></path> </svg> <span id="theme-label">Theme</span> </button> <ul class="nav-dropdown-menu" role="menu"> <li><button class="dropdown-option" type="button" data-theme-value="light">Light</button></li> <li><button class="dropdown-option" type="button" data-theme-value="dark">Dark</button></li> <li><button class="dropdown-option" type="button" data-theme-value="auto">Auto</button></li> </ul> </div> </div> </div>  <article class="post-single"> <h1>🚨 Checklist Avançado de Segurança para WordPress 🚨</h1> <p class="post-meta">16 de mai. de 2025</p> <img src="/_astro/thumbnail.BHIGP0TV.jpg" alt="Miniatura de 🚨 Checklist Avançado de Segurança para WordPress 🚨" class="post-thumbnail">  <p>Você investe tempo e dinheiro no seu site WordPress — mas será que ele está realmente protegido?</p>
+<p>Com o aumento dos ataques cibernéticos, principalmente em sites WordPress mal configurados, segurança precisa ser prioridade. Aqui vai um checklist técnico e estratégico que aplico nos projetos para garantir máxima proteção:</p>
+<p>🔐 1. Login Seguro</p>
+<ul>
+<li>Ative autenticação em 2 fatores (2FA)</li>
+<li>Oculte a URL de login padrão (/wp-login.php)</li>
+<li>Limite tentativas de acesso falho</li>
+</ul>
+<p>🧱 2. Hardening do WordPress</p>
+<ul>
+<li>Desabilite a edição de arquivos pelo painel (wp-config.php)</li>
+<li>Restrinja permissões de pastas e arquivos</li>
+<li>Bloqueie XML-RPC se não estiver em uso</li>
+</ul>
+<p>📦 3. Backups Regulares</p>
+<ul>
+<li>Automatize backups completos (arquivos + banco de dados)</li>
+<li>Armazene em serviços externos (Google Drive, S3, etc.)</li>
+<li>Teste a restauração com frequência</li>
+</ul>
+<p>🛡️ 4. Firewall e Monitoramento</p>
+<ul>
+<li>Use WAFs (como Cloudflare, Wordfence ou MalCare)</li>
+<li>Ative alertas em tempo real</li>
+<li>Monitore logs de acesso e atividade de plugins</li>
+</ul>
+<p>🔄 5. Plugins e Temas</p>
+<ul>
+<li>Instale apenas de fontes confiáveis</li>
+<li>Mantenha tudo atualizado (inclusive o próprio WP)</li>
+<li>Remova plugins inativos e temas não utilizados</li>
+</ul>
+<p>🔍 6. Verificação de Vulnerabilidades</p>
+<ul>
+<li>Utilize ferramentas como WPScan ou SiteCheck</li>
+<li>Agende varreduras mensais ou semanais</li>
+</ul>
+<p>⸻</p>
+<p>Segurança em WordPress vai muito além de instalar um plugin antivírus. Envolve estratégia, atualização constante e cultura de prevenção. 🔧💻</p>
+<p>👉 Você já aplica todas essas práticas no seu projeto WordPress?
+Compartilhe nos comentários o que já faz parte da sua rotina — ou o que ainda precisa implementar. 👇</p>
+<p>#WordPress #SegurançaDigital #DesenvolvimentoWeb #WPSecurity #ChecklistWordPress #Cloudflare #2FA #Firewall #DevWordPress #GestãoWeb #LinkedInTech</p> </article>  </main> <script>
+      (() => {
+        const applyTheme = (mode) => {
+          const resolved =
+            mode === "auto"
+              ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+              : mode;
+
+          document.documentElement.setAttribute("data-theme", resolved);
+          document.documentElement.setAttribute("data-theme-mode", mode);
+          localStorage.setItem("theme-mode", mode);
+
+          const label = document.getElementById("theme-label");
+          if (label) {
+            label.textContent = mode === "auto" ? "Auto" : mode[0].toUpperCase() + mode.slice(1);
+          }
+
+          document.querySelectorAll(".dropdown-option[data-theme-value]").forEach((btn) => {
+            const isActive = btn.getAttribute("data-theme-value") === mode;
+            btn.classList.toggle("active", isActive);
+            btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+        };
+
+        const current = document.documentElement.getAttribute("data-theme-mode") || "auto";
+        applyTheme(current);
+
+        const languageDropdown = document.getElementById("language-dropdown");
+        const languageTrigger = document.getElementById("language-trigger");
+        const themeDropdown = document.getElementById("theme-dropdown");
+        const themeTrigger = document.getElementById("theme-trigger");
+
+        const setLanguageDropdownOpen = (isOpen) => {
+          if (!languageDropdown || !languageTrigger) {
+            return;
+          }
+
+          languageDropdown.classList.toggle("is-open", isOpen);
+          languageTrigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        };
+
+        const setThemeDropdownOpen = (isOpen) => {
+          if (!themeDropdown || !themeTrigger) {
+            return;
+          }
+
+          themeDropdown.classList.toggle("is-open", isOpen);
+          themeTrigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        };
+
+        languageTrigger?.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const willOpen = !languageDropdown?.classList.contains("is-open");
+          setLanguageDropdownOpen(Boolean(willOpen));
+          setThemeDropdownOpen(false);
+        });
+
+        languageDropdown?.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            setLanguageDropdownOpen(false);
+          });
+        });
+
+        themeTrigger?.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const willOpen = !themeDropdown?.classList.contains("is-open");
+          setThemeDropdownOpen(Boolean(willOpen));
+          setLanguageDropdownOpen(false);
+        });
+
+        document.querySelectorAll(".dropdown-option[data-theme-value]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const mode = btn.getAttribute("data-theme-value");
+            if (mode) {
+              applyTheme(mode);
+            }
+
+            setThemeDropdownOpen(false);
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!languageDropdown || !languageDropdown.contains(event.target)) {
+            setLanguageDropdownOpen(false);
+          }
+
+          if (!themeDropdown || !themeDropdown.contains(event.target)) {
+            setThemeDropdownOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setLanguageDropdownOpen(false);
+            setThemeDropdownOpen(false);
+          }
+        });
+
+        const media = window.matchMedia("(prefers-color-scheme: dark)");
+        media.addEventListener("change", () => {
+          const mode = document.documentElement.getAttribute("data-theme-mode") || "auto";
+          if (mode === "auto") {
+            applyTheme("auto");
+          }
+        });
+      })();
+    </script> </body> </html>
